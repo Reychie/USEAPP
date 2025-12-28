@@ -1,0 +1,13 @@
+======== PAYSLIP ========
+
+Employee: Jed Snyder
+Period: May 2025
+
+Basic Salary: ₱0.00
+Overtime Pay: ₱0.00
+Deductions: ₱0.00
+------------------------
+Net Pay: ₱0.00
+
+
+Generated on: 2025-05-25 11:21:45

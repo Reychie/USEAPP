@@ -1,0 +1,8 @@
+PAYSLIP
+
+Employee: Zail Bacor
+Month: 5/2025
+Basic Salary: $20000.00
+Overtime: $0.00
+Deductions: $21100.00
+Total Salary: $-1100.00

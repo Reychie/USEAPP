@@ -1,0 +1,39 @@
+================ PAYROLL REPORT ================
+Month: May 2025
+Generated on: 2025-05-25 15:54:52
+=============================================
+
+Employee: Angelo alejo                  
+Days Worked: 2         
+Basic Salary: ₱20,000.00   
+Overtime: ₱0.00        
+Deductions: ₱2,000.00    
+Net Pay: ₱18,000.00   
+--------------------------------------------
+
+Employee: Jed Snyder                    
+Days Worked: 1         
+Basic Salary: ₱20,000.00   
+Overtime: ₱0.00        
+Deductions: ₱2,000.00    
+Net Pay: ₱18,000.00   
+--------------------------------------------
+
+Employee: Sherly Atillo                 
+Days Worked: 1         
+Basic Salary: ₱20,000.00   
+Overtime: ₱0.00        
+Deductions: ₱2,000.00    
+Net Pay: ₱18,000.00   
+--------------------------------------------
+
+
+===================== SUMMARY ====================
+Total Employees: 3
+Total Basic Salary: ₱60,000.00
+Total Overtime: ₱0.00
+Total Deductions: ₱6,000.00
+Total Net Pay: ₱54,000.00
+==============================================
+
+This is a computer-generated document. No signature is required.
