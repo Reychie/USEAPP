@@ -1,0 +1,32 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+**/secrets*
+
+# Dependencies / build
+node_modules/
+vendor/
+.vercel/
+dist/
+build/
+.next/
+
+# Logs and OS
+*.log
+.DS_Store
+Thumbs.db
+
+# Local uploads (keep directory structure via .gitkeep if needed)
+**/uploads/payslips/*
+!**/uploads/payslips/.gitkeep
+**/uploads/reports/*
+!**/uploads/reports/.gitkeep
+
+# IDE
+.idea/
+.vscode/
+*.swp

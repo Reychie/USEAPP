@@ -27,7 +27,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../../view/admin/controller/logout.php">
+      <a class="nav-link" href="controller/logout.php">
         <i class="bi bi-box-arrow-left"></i>
         <span>Logout</span>
       </a>

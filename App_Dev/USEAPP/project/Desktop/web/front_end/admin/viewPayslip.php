@@ -55,9 +55,7 @@ if (preg_match('/^(?:payslip_)?(\d+)_(\d+)(?:_\d+)?\.(?:pdf|txt)$/', $fileName, 
     $baseDirs = [
         dirname(__FILE__) . '/../../uploads/payslips/',
         dirname(dirname(dirname(__FILE__))) . '/uploads/payslips/',
-        dirname(__FILE__) . '/../../../uploads/payslips/',
-        $_SERVER['DOCUMENT_ROOT'] . '/app_dev_last/Desktop/AR_Attendance/uploads/payslips/',
-        $_SERVER['DOCUMENT_ROOT'] . '/app_dev_last/uploads/payslips/'
+        rtrim($_SERVER['DOCUMENT_ROOT'] ?? '', '/\\') . '/uploads/payslips/',
     ];
     
     foreach ($baseDirs as $dir) {
@@ -83,8 +81,7 @@ if (preg_match('/^(?:payslip_)?(\d+)_(\d+)(?:_\d+)?\.(?:pdf|txt)$/', $fileName, 
 // Add the filename directly to various paths as a fallback
 $possiblePaths[] = dirname(__FILE__) . '/../../uploads/payslips/' . $fileName;
 $possiblePaths[] = dirname(dirname(dirname(__FILE__))) . '/uploads/payslips/' . $fileName;
-$possiblePaths[] = dirname(__FILE__) . '/../../../uploads/payslips/' . $fileName;
-$possiblePaths[] = $_SERVER['DOCUMENT_ROOT'] . '/app_dev_last/Desktop/AR_Attendance/uploads/payslips/' . $fileName;
+$possiblePaths[] = rtrim($_SERVER['DOCUMENT_ROOT'] ?? '', '/\\') . '/uploads/payslips/' . $fileName;
 
 // Search for the file
 $filePath = null;

@@ -108,5 +108,5 @@ $addedRecords = addTestAttendanceData($conn);
 
 // Link back to test export and reports
 echo "<p><a href='test_export.php'>Run Export Test</a></p>";
-echo "<p><a href='view/admin/view_reports.php'>View Reports</a></p>";
+echo "<p><a href='front_end/admin/view_reports.php'>View Reports</a></p>";
 ?> 

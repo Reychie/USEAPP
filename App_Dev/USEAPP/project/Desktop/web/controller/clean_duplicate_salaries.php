@@ -137,5 +137,5 @@ if ($orphanResult && $orphanResult->num_rows > 0) {
 
 $conn->close();
 echo "<p>Database cleanup completed.</p>";
-echo "<p><a href='../view/users/Payslip.php'>Return to Payslip Page</a></p>";
+echo "<p><a href='../front_end/users/Payslip.php'>Return to Payslip Page</a></p>";
 ?> 

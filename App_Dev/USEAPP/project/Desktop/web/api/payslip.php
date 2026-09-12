@@ -243,19 +243,22 @@ function viewPayslip($payslipId) {
 }
 
 function getApiBaseUrl() {
-    // Hardcoded base URL - this ensures the same URL is used regardless of where the request comes from
-    $baseUrl = 'http://192.168.1.5/app_dev_last/Desktop/AR_Attendance/api';
-    
-    // Fall back to server variables only if we're sure they're set properly
-    if (isset($_SERVER['HTTP_HOST']) && !empty($_SERVER['HTTP_HOST'])) {
-        $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443)
+        ? 'https://'
+        : 'http://';
+
+    if (!empty($_SERVER['HTTP_HOST'])) {
         $host = $_SERVER['HTTP_HOST'];
-        $uri = isset($_SERVER['PHP_SELF']) ? rtrim(dirname($_SERVER['PHP_SELF']), '/') : '/app_dev_last/Desktop/AR_Attendance/api';
+        $uri = isset($_SERVER['PHP_SELF']) ? rtrim(dirname($_SERVER['PHP_SELF']), '/') : '/api';
         return $protocol . $host . $uri . '/payslip.php';
     }
-    
-    // If server variables aren't reliable, use the hardcoded URL
-    return $baseUrl . '/payslip.php';
+
+    $configured = getenv('API_BASE_URL');
+    if ($configured) {
+        return rtrim($configured, '/') . '/payslip.php';
+    }
+
+    return $protocol . 'localhost/api/payslip.php';
 }
 
 function handleGeneratePayslip() {

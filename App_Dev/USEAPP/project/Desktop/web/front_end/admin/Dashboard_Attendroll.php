@@ -13,7 +13,8 @@ include("../../dB/config.php");
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="../../assets/img/ATTEND ROLL.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
     <title>Dashboard_Attendroll</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

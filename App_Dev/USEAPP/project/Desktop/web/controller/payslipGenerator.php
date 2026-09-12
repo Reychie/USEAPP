@@ -219,11 +219,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'GET
         // Add a script to redirect back to the payroll calculation page
         echo "<script>";
         echo "setTimeout(function() {";
-        echo "  window.location.href = '../view/admin/Payroll_Calculation.php?month=" . $month . "&year=" . $year . "';";
+        echo "  window.location.href = '../front_end/admin/Payroll_Calculation.php?month=" . $month . "&year=" . $year . "';";
         echo "}, 3000);";  // 3-second delay before redirecting
         echo "</script>";
         echo "<p>Payslip generation completed. You will be redirected back to the Payroll Calculation page in 3 seconds.</p>";
-        echo "<p>If you are not redirected, <a href='../view/admin/Payroll_Calculation.php?month=" . $month . "&year=" . $year . "'>click here</a>.</p>";
+        echo "<p>If you are not redirected, <a href='../front_end/admin/Payroll_Calculation.php?month=" . $month . "&year=" . $year . "'>click here</a>.</p>";
         exit;
     }
 }

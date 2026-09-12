@@ -128,15 +128,13 @@ foreach ($files as $match) {
 // Add the requested file path as a direct check
 if (!empty($requestedFile)) {
     $possiblePaths[] = dirname(__FILE__) . '/../../' . $requestedFile;
-    $possiblePaths[] = $_SERVER['DOCUMENT_ROOT'] . '/app_dev_last/' . $requestedFile;
+    $possiblePaths[] = rtrim($_SERVER['DOCUMENT_ROOT'] ?? '', '/\\') . '/' . ltrim($requestedFile, '/');
 }
 
 // Add more fallback paths for direct checking
 $possiblePaths[] = dirname(__FILE__) . '/../../uploads/payslips/' . $fileName;
 $possiblePaths[] = dirname(dirname(dirname(__FILE__))) . '/uploads/payslips/' . $fileName;
-$possiblePaths[] = dirname(__FILE__) . '/../../../uploads/payslips/' . $fileName;
-$possiblePaths[] = $_SERVER['DOCUMENT_ROOT'] . '/app_dev_last/Desktop/AR_Attendance/uploads/payslips/' . $fileName;
-$possiblePaths[] = $_SERVER['DOCUMENT_ROOT'] . '/app_dev_last/uploads/payslips/' . $fileName;
+$possiblePaths[] = rtrim($_SERVER['DOCUMENT_ROOT'] ?? '', '/\\') . '/uploads/payslips/' . $fileName;
 
 // Search for the file
 $filePath = null;

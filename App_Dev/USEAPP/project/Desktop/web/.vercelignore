@@ -1,0 +1,6 @@
+phpinfo.php
+add_test_attendance.php
+uploads/payslips/**
+uploads/reports/**
+**/*.log
+.git

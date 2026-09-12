@@ -13,23 +13,9 @@
 # Protect directory listing
 Options -Indexes
 
-# Handle errors
-ErrorDocument 404 /app_dev_last/Desktop/AR_Attendance/api/error.php
-
-# Redirect all requests to index.php if the file doesn't exist
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^(.*)$ /app_dev_last/Desktop/AR_Attendance/api/error.php [L]
-</IfModule>
-
 # Disable PHP errors for production
-php_flag display_startup_errors off
-php_flag display_errors off
-php_flag html_errors off
-
-# Enable these for development
-# php_flag display_startup_errors on
-# php_flag display_errors on
-# php_flag html_errors on 
+<IfModule mod_php.c>
+    php_flag display_startup_errors off
+    php_flag display_errors off
+    php_flag html_errors off
+</IfModule>
