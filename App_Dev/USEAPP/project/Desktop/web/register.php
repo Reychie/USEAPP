@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +39,6 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-<?php session_start(); ?>
 <body>
 
   <main>
